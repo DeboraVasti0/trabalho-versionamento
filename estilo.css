@@ -1,0 +1,125 @@
+
+body {
+    background-color: #F3F7FC;
+    font-family: 'Crimson Text', serif;
+    color: #35445A;
+    padding: 15px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #397DB5;
+    font-size: 2.75em;
+    margin-bottom: 35px;
+}
+
+/* Organização dos cards */
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Todos os cards */
+.autismo,
+.respeite,
+.preconceito,
+.inclusao,
+.mensagem {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+        "imagem titulo"
+        "imagem texto";
+    align-items: center;
+    gap: 12px 25px;
+    padding: 22px;
+    border-radius: 18px;
+    min-height: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Cores dos cards */
+.autismo {
+    background-color: #A9DFF2;
+}
+
+.respeite {
+    background-color: #A8E878;
+}
+
+.preconceito {
+    background-color: #FFE17A;
+}
+
+.inclusao {
+    background-color: #B98AE8;
+}
+
+.mensagem {
+    background-color: #F58DB8;
+}
+
+/* Títulos */
+h2 {
+    grid-area: titulo;
+    color: #35445A;
+    font-size: 1.7em;
+    margin: 0;
+}
+
+/* Imagens */
+img {
+    grid-area: imagem;
+    width: 100%;
+    max-width: 275px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: auto;
+}
+
+/* Textos */
+p {
+    grid-area: texto;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Links */
+a:link,
+a:visited {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #397DB5;
+}
+
+/* Responsividade para celular */
+@media (max-width: 650px) {
+    .autismo,
+    .respeite,
+    .preconceito,
+    .inclusao,
+    .mensagem {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "imagem"
+            "texto";
+        padding: 18px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 275px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
